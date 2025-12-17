@@ -33,7 +33,7 @@ const gameItems = {
         {name: 'Sea Turtle', price: '', stock: '', img: 'img/Gag/seaturtle.webp'},
         {name: 'Swan', price: '-', stock: '1', img: 'img/Gag/swan.webp'},
         {name: 'Dragon Fly', price: '-', stock: '-', img: 'img/Gag/dragonfly.webp'},
-        {name: 'Cockatrice', price: '-', stock: '-', img: 'img/Gag/dragonfly.webp'}
+        {name: 'Cockatrice', price: '-', stock: '-', img: 'img/Gag/cockatrice.webp'}
     ]
 };
 
@@ -76,5 +76,6 @@ function hideItems() {
     gameSelection.classList.remove('hidden');
     itemList.classList.remove('show');
     stockTitle.textContent = 'Select Game';
+
 
 }
