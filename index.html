@@ -1,0 +1,82 @@
+<?php
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DafzLys Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DafzLys Store</div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#grub">Grub</a></li>
+            <li><a href="#stock">Stock</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <section id="home" class="section">
+            <div class="content">
+                <div class="text">
+                    <h1>Welcome to DafzLys Store</h1>
+                    <p>DafzLys store is a community for buying or selling game items and accounts such as Roblox.</p>
+                </div>
+                <div class="image">
+                    <img src="img/logo.jpg" alt="DafzLys Logo">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="grub" class="section">
+            <div class="content">
+                <h2>Join Our Community</h2>
+                <p>Interact with fellow gamers in our exclusive group. Share tips, strategies, and get the latest updates on items and accounts for Roblox.</p>
+                <p>Join the Community</p>
+                <a href="https://www.whatsapp.com/channel/0029VbBqpkW8V0thTyfRpV2P" class="btn">Join Community</a>
+            </div>
+        </section>
+
+       
+        <section id="stock" class="section">
+            <div class="content">
+                <h2 id="stock-title">Select Game</h2>
+                <div id="game-selection" class="game-grid">
+                    <div class="game-card" data-game="fish-it">
+                        <h3>Fish It</h3>
+                        <p>Explore fishing items and tools.</p>
+                    </div>
+                    <div class="game-card" data-game="grow-garden">
+                        <h3>Grow a Garden</h3>
+                        <p>Discover gardening supplies and seeds.</p>
+                    </div>
+                </div>
+                <div id="item-list" class="item-list hidden">
+                    <button id="back-btn" class="btn back-btn">Back to Games</button>
+                    <div id="items-container" class="items-grid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>Need help? Reach out to our admin for support and inquiries.</p>
+                <p>Email: jbdafzls16@gmail.com</p>
+                <p>whatsapp: +62 896-2443-7963</p>
+                <a href="https://wa.me/+6289624437963" class="btn">Chat Owner</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
