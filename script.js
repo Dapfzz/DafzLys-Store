@@ -60,7 +60,7 @@ const gameItems = {
         {name: 'Spriggan', ton: '', price: '1k', stock: 3, img: 'img/Gag/spriggan.webp'},
         {name: 'Junkbot', ton: '', price: '1k', stock: 4, img: 'img/Gag/Junkbot.webp'},
         {name: 'Polar bear', ton: '', price: '2k', stock: 1, img: 'img/Gag/polarbear.webp'},
-        {name: 'Turtle', ton: '', price: '1k', stock: 1, img: 'img/Gag/seaturtle.webp'},
+        {name: 'Turtle', ton: '', price: '1k', stock: 1, img: 'img/Gag/turtle.webp'},
         {name: 'Spaghetti Sloth', ton: '', price: '1k', stock: 1, img: 'img/Gag/sloth.webp'},
         {name: 'Blood Kiwi', ton: '', price: '1k', stock: 5, img: 'img/Gag/bloodkiwi.webp'},
         {name: 'Apple Gazelle', ton: '', price: '1k', stock: 2, img: 'img/Gag/applegazelle.webp'},
@@ -113,3 +113,4 @@ function hideItems() {
     stockTitle.textContent = 'Select Game';
 
 }
+
