@@ -5,8 +5,27 @@ document.querySelectorAll('.menu a').forEach(anchor => {
         target.scrollIntoView({
             behavior: 'smooth'
         });
+        closeMenu();
     });
 });
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+}
+
+function closeMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('show');
+}
+
+window.onload = function() {
+    document.getElementById('popup-modal').style.display = 'block';
+};
+
+function closeModal() {
+    document.getElementById('popup-modal').style.display = 'none';
+}
 
 const gameSelection = document.getElementById('game-selection');
 const itemList = document.getElementById('item-list');
@@ -16,24 +35,40 @@ const backBtn = document.getElementById('back-btn');
 
 const gameItems = {
     'fish-it': [
-        { name: 'King Jelly', price: '7.000', stock: 1, img: 'img/Fish it/jelly.png' },
-        { name: 'Thin Shark', price: '4.000', stock: 1, img: 'img/Fish it/thin shark.png' },
-        { name: 'El Maja', price: '25.000', stock: 1, img: 'img/Fish it/maja.png' },
-        { name: 'Gladiator', price: '4.000', stock: 2, img: 'img/Fish it/gladiator.png' },
-        { name: '1M Coins', price: '5.000/1M', stock: 11, img: 'img/Fish it/koin.png' }
+        { name: 'King Jelly', price: '5k', stock: 1, img: 'img/Fish it/jelly.png' },
+        { name: 'Thin Shark', price: '4k', stock: 1, img: 'img/Fish it/thin shark.png' },
+        { name: 'El Maja', price: '25k', stock: 1, img: 'img/Fish it/maja.png' },
+        { name: 'Gladiator', price: '4k', stock: 2, img: 'img/Fish it/gladiator.png' },
+        { name: '1M Coins', price: '4k/1M', stock: 11, img: 'img/Fish it/koin.png' }
     ],
     'grow-garden': [
-        {name: 'Mimic', price: '-', stock: '-', img: 'img/Gag/mimic.webp'},
-        {name: 'Spinosaurus', price: '-', stock: '1', img: 'img/Gag/spinosaurus.webp'},
-        {name: 'Lion', price: '-', stock: '2', img: 'img/Gag/lion.webp'},
-        {name: 'Tiger', price: '-', stock: '1', img: 'img/Gag/tiger.webp'},
-        {name: 'Peacock', price: '-', stock: '-', img: 'img/Gag/peacock.webp'},
-        {name: 'Rainbow Mizuchi', price: '', stock: '', img: 'img/Gag/rainbowmizuchi.webp'},
-        {name: 'Red Fox', price: '-', stock: '1', img: 'img/Gag/redfox.webp'},
-        {name: 'Sea Turtle', price: '', stock: '', img: 'img/Gag/seaturtle.webp'},
-        {name: 'Swan', price: '-', stock: '1', img: 'img/Gag/swan.webp'},
-        {name: 'Dragon Fly', price: '-', stock: '-', img: 'img/Gag/dragonfly.webp'},
-        {name: 'Cockatrice', price: '-', stock: '-', img: 'img/Gag/cockatrice.webp'}
+        {name: 'Spino', ton: '', price: '6k', stock: 1, img: 'img/Gag/spinosaurus.webp'},
+        {name: 'Swan', ton: '', price: '2k', stock: 2, img: 'img/Gag/swan.webp'},
+        {name: 'Tiger', ton: '', price: '4k', stock: 1, img: 'img/Gag/tiger.webp'},
+        {name: 'Lion', ton: '', price: '4k', stock: 2, img: 'img/Gag/lion.webp'},
+        {name: 'Red fox', ton: '', price: '2k', stock: 1, img: 'img/Gag/redfox.webp'},
+        {name: 'Mooncat', ton: '', price: '1k', stock: 5, img: 'img/Gag/mooncat.webp'},
+        {name: 'Seal', ton: '', price: '1,5k', stock: 1, img: 'img/Gag/seal.webp'},
+        {name: 'Blackcat', ton: '', price: '1k', stock: 8, img: 'img/Gag/blackcat.webp'},
+        {name: 'Silver Dragonfly', ton: '', price: '1k', stock: 5, img: 'img/Gag/silverdragonfly.webp'},
+        {name: 'Firefly', ton: '', price: '1k', stock: 5, img: 'img/Gag/firefly.webp'},
+        {name: 'Crocodile', ton: '', price: '3k', stock: 2, img: 'img/Gag/crocodile.webp'},
+        {name: 'Lemon Lion', ton: '', price: '2k', stock: 3, img: 'img/Gag/lemonlion.webp'},
+        {name: 'Chicken Zombie', ton: '', price: '1k', stock: 1, img: 'img/Gag/chickenzombie.webp'},
+        {name: 'Sugar Glider', ton: '', price: '1k', stock: 10, img: 'img/Gag/sugarglider.webp'},
+        {name: 'Green Bean', ton: '', price: '1,5k', stock: 3, img: 'img/Gag/greenbean.webp'},
+        {name: 'Spriggan', ton: '', price: '1k', stock: 3, img: 'img/Gag/spriggan.webp'},
+        {name: 'Junkbot', ton: '', price: '1k', stock: 4, img: 'img/Gag/Junkbot.webp'},
+        {name: 'Polar bear', ton: '', price: '2k', stock: 1, img: 'img/Gag/polarbear.webp'},
+        {name: 'Turtle', ton: '', price: '1k', stock: 1, img: 'img/Gag/seaturtle.webp'},
+        {name: 'Spaghetti Sloth', ton: '', price: '1k', stock: 1, img: 'img/Gag/sloth.webp'},
+        {name: 'Blood Kiwi', ton: '', price: '1k', stock: 5, img: 'img/Gag/bloodkiwi.webp'},
+        {name: 'Apple Gazelle', ton: '', price: '1k', stock: 2, img: 'img/Gag/applegazelle.webp'},
+        {name: 'Shroomie', ton: '', price: '1k', stock: 6, img: 'img/Gag/shroomie.webp'},
+        {name: 'Ostrich', ton: '', price: '1,5k', stock: 8, img: 'img/Gag/ostrich.webp'},
+        {name: 'Peach Wasp', ton: '', price: '1k', stock: 2, img: 'img/Gag/peachwasp.webp'},
+        {name: 'Pterodacly', ton: '', price: '1k', stock: 1, img: 'img/Gag/pterodactyl.webp'},
+        {name: 'Grizzly bear', ton: '', price: '1k', stock: 3, img: 'img/Gag/grizzlybear.webp'}
     ]
 };
 
@@ -76,6 +111,5 @@ function hideItems() {
     gameSelection.classList.remove('hidden');
     itemList.classList.remove('show');
     stockTitle.textContent = 'Select Game';
-
 
 }
