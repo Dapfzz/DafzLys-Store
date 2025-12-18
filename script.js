@@ -113,4 +113,3 @@ function hideItems() {
     stockTitle.textContent = 'Select Game';
 
 }
-
